@@ -1,8 +1,4 @@
-﻿using OInkCoin.Services;
-using OInkCoin.Views;
-using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace OInkCoin
 {
@@ -13,7 +9,6 @@ namespace OInkCoin
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 
