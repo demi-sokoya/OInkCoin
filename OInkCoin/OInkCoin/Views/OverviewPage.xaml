@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OInkCoin.Views.OverviewPage"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <ContentPage.Content>
+        <AbsoluteLayout Padding="10">
+            <StackLayout AbsoluteLayout.LayoutFlags="All"
+                         AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center">
+                    <ImageButton Source="left.png" 
+                             HeightRequest="20" 
+                             WidthRequest="20"
+                             BackgroundColor="Transparent"/>
+                    <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM yyyy}'}"
+                       FontSize="Medium"
+                       TextColor="Black"
+                       Padding="20,0,20,0"/>
+                    <ImageButton Source="right.png" 
+                             HeightRequest="20" 
+                             WidthRequest="20"
+                             BackgroundColor="Transparent"/>
+                </StackLayout>
+            </StackLayout>
+            <ImageButton Source="fab.png"
+                         HorizontalOptions="End"
+                         AbsoluteLayout.LayoutFlags="PositionProportional"
+                         AbsoluteLayout.LayoutBounds="1, 1, 60, 60"
+                         BackgroundColor="Transparent"/>
+
+        </AbsoluteLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:OInkCoin.Views"
        Title="OInkCoin"
        x:Class="OInkCoin.AppShell">
 
@@ -33,6 +34,10 @@
         <ShellContent Title="Browse" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}" />
     </TabBar>-->
 
+    <!--<TabBar>
+        <ShellContent Title="Overview" Icon="icon_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:OverviewPage}"/>
+    </TabBar>-->
+
     <!--
         If you would like to navigate to this content you can do so by calling
         await Shell.Current.GoToAsync("//LoginPage");
@@ -41,5 +46,8 @@
         <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
     </TabBar>-->
 
+    <TabBar>
+        <ShellContent Route="OverviewPage" ContentTemplate="{DataTemplate local:OverviewPage}"/>
+    </TabBar>
 
 </Shell>
