@@ -23,11 +23,12 @@
                              BackgroundColor="Transparent"/>
                 </StackLayout>
             </StackLayout>
-            <ImageButton Source="fab.png"
+            <ImageButton Source="add.png"
                          HorizontalOptions="End"
                          AbsoluteLayout.LayoutFlags="PositionProportional"
                          AbsoluteLayout.LayoutBounds="1, 1, 60, 60"
-                         BackgroundColor="Transparent"/>
+                         BackgroundColor="Transparent"
+                         Clicked="AddTransaction_OnClicked"/>
 
         </AbsoluteLayout>
         

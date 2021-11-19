@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using OInkCoin.Views;
 
 namespace OInkCoin
 {
@@ -9,7 +10,7 @@ namespace OInkCoin
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new OverviewPage());
         }
 
         protected override void OnStart()

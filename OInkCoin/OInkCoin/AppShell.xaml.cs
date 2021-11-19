@@ -10,6 +10,7 @@ namespace OInkCoin
             InitializeComponent();
 
             Routing.RegisterRoute(nameof(OverviewPage), typeof(OverviewPage));
+            Routing.RegisterRoute(nameof(AddNewTransactionPage), typeof(AddNewTransactionPage));
         }
 
     }

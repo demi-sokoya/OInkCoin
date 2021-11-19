@@ -10,16 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace OInkCoin.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class OverviewPage : ContentPage
+    public partial class AddNewTransactionPage : ContentPage
     {
-        public OverviewPage()
+        public AddNewTransactionPage()
         {
             InitializeComponent();
         }
 
-        private async void AddTransaction_OnClicked(object sender, EventArgs e)
+        private async void SaveTransaction_OnClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AddNewTransactionPage());
+            await Navigation.PushAsync(new OverviewPage());
         }
     }
 }

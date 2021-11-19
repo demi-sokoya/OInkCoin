@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OInkCoin.Views.AddNewTransactionPage">
+    <ContentPage.Content>
+        <AbsoluteLayout Padding="10">
+            <StackLayout AbsoluteLayout.LayoutFlags="All"
+                         AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="Center">
+                        <Label Text="Expense" 
+                               />
+                        <Switch />
+                        <Label Text="Transfer" 
+                               />
+                    </StackLayout>
+                    <Label Text="$0"
+                           FontSize="Header"
+                           HorizontalOptions="Center"/>
+                    <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="Center">
+                        <Label Text="Credit" 
+                               />
+                        <Switch />
+                        <Label Text="Debit" 
+                               />
+                    </StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            
+                        </Grid.RowDefinitions>
+                        <BoxView></BoxView>
+                        <Image Source="calendar.png"
+                               HeightRequest="20"
+                               Grid.Column="0"/>
+                        <DatePicker Grid.Column="1"
+                                    Grid.ColumnSpan="3"/>
+                        <ImageButton Source="left.png" 
+                             HeightRequest="10" 
+                             WidthRequest="10"
+                             BackgroundColor="Transparent"
+                                     Grid.Column="5"/>
+                        
+                        <ImageButton Source="right.png" 
+                             HeightRequest="10" 
+                             WidthRequest="10"
+                             BackgroundColor="Transparent"
+                                     Grid.Column="6"/>
+                    </Grid>
+                    <StackLayout Orientation="Horizontal" Spacing="20">
+                        <Image Source="calendar.png"
+                               HeightRequest="20"
+                               />
+                        <DatePicker />
+                        <ImageButton Source="left.png" 
+                             HeightRequest="12" 
+                             WidthRequest="12"
+                             BackgroundColor="Transparent"
+                                     Grid.Column="5"/>
+
+                        <ImageButton Source="right.png" 
+                             HeightRequest="12" 
+                             WidthRequest="12"
+                             BackgroundColor="Transparent"
+                                     Grid.Column="6"/>
+                    </StackLayout>
+
+                </StackLayout>
+
+
+            </StackLayout>
+            <ImageButton Source="save.png"
+                         HorizontalOptions="End"
+                         AbsoluteLayout.LayoutFlags="PositionProportional"
+                         AbsoluteLayout.LayoutBounds="1, 1, 60, 60"
+                         BackgroundColor="Transparent"
+                         Clicked="SaveTransaction_OnClicked"/>
+        </AbsoluteLayout>
+       
+    </ContentPage.Content>
+</ContentPage>
