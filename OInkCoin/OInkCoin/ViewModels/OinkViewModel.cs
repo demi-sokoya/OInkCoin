@@ -4,9 +4,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.CommunityToolkit.ObjectModel;
-using OInkCoin.Models;
+using OinkCoin.Models;
 
-namespace OInkCoin.ViewModels
+namespace OinkCoin.ViewModels
 {
     class OinkViewModel: ViewModelBase
     {

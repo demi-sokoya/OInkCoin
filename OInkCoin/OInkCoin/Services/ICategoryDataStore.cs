@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using OInkCoin.Models;
+using OinkCoin.Models;
 using System.Threading.Tasks;
 
 
-namespace OInkCoin.Services
+namespace OinkCoin.Services
 {
     
         public interface ICategoryDataStore<T>

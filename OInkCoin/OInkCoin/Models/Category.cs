@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OInkCoin.Models
+namespace OinkCoin.Models
 {
     public class Category
     {

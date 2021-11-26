@@ -1,8 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="OInkCoin.Views.AddNewTransactionPage"
-             xmlns:viewmodels="clr-namespace:OinkCoin.ViewModels"             xmlns:models="clr-namespace:OinkCoin.Models"             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"             >    <ContentPage.BindingContext>        <viewmodels:OInkViewModel/>    </ContentPage.BindingContext>
+             x:Class="OinkCoin.Views.AddNewTransactionPage"
+             xmlns:viewmodels="clr-namespace:OinkCoin.ViewModels"
+             xmlns:models="clr-namespace:OinkCoin.Models"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             >
+
+    <ContentPage.BindingContext>
+        <viewmodels:OinkViewModel/>
+    </ContentPage.BindingContext>
     
     <ContentPage.Content>
         <AbsoluteLayout Padding="10">
@@ -75,7 +82,8 @@
                                      Grid.Column="6"/>
                     </StackLayout>
                     <Picker
-                        BindingContext=""/>
+                        ItemsSource="{Binding Categories}"/>
+                    <Picker></Picker>
                 </StackLayout>
 
 

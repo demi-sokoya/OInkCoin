@@ -1,7 +1,7 @@
 ﻿using Xamarin.Forms;
-using OInkCoin.Views;
+using OinkCoin.Views;
 
-namespace OInkCoin
+namespace OinkCoin
 {
     public partial class App : Application
     {

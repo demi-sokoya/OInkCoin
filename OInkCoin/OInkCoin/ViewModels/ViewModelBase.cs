@@ -1,9 +1,9 @@
 ﻿using MvvmHelpers;
-using OInkCoin.Models;
-using OInkCoin.Services;
+using OinkCoin.Models;
+using OinkCoin.Services;
 using Xamarin.Forms;
 
-namespace OInkCoin.ViewModels
+namespace OinkCoin.ViewModels
 {
     class ViewModelBase : BaseViewModel
     {

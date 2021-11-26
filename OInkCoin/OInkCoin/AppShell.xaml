@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:OInkCoin.Views"
+       xmlns:local="clr-namespace:OinkCoin.Views"
        Title="OInkCoin"
-       x:Class="OInkCoin.AppShell">
+       x:Class="OinkCoin.AppShell">
 
     <!--
         The overall app visual hierarchy is defined here, along with navigation.

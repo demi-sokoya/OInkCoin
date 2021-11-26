@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31727.386
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OInkCoin.Android", "OInkCoin\OInkCoin.Android\OInkCoin.Android.csproj", "{F158D591-6094-4F12-BB1E-D4157BF71C7E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OinkCoin.Android", "OInkCoin\OInkCoin.Android\OinkCoin.Android.csproj", "{F158D591-6094-4F12-BB1E-D4157BF71C7E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OinkCoin", "OInkCoin\OInkCoin\OinkCoin.csproj", "{CB8A2426-C1B1-488E-9774-A684F75DB3E5}"
 EndProject

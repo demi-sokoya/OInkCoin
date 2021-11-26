@@ -1,12 +1,12 @@
 ﻿using Newtonsoft.Json;
-using OInkCoin.Models;
+using OinkCoin.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OInkCoin.Services
+namespace OinkCoin.Services
 {
     class CategoryDataStore
     {

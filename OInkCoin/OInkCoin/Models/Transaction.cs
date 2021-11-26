@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 //using System.ComponentModel.DataAnnotations;
 
-namespace OInkCoin.Models
+namespace OinkCoin.Models
 {
     public class Transaction
     {

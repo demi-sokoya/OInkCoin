@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace OInkCoin.Views
+namespace OinkCoin.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddNewTransactionPage : ContentPage

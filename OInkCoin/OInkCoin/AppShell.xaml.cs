@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
-using OInkCoin.Views;
-namespace OInkCoin
+using OinkCoin.Views;
+namespace OinkCoin
 {
     public partial class AppShell : Xamarin.Forms.Shell
     {
