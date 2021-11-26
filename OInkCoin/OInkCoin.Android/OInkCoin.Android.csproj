@@ -87,9 +87,9 @@
     <AndroidResource Include="Resources\drawable\icon_feed.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OInkCoin\OInkCoin.csproj">
-      <Project>{374DF4F2-A364-448E-975F-C272DF789549}</Project>
-      <Name>OInkCoin</Name>
+    <ProjectReference Include="..\OInkCoin\OinkCoin.csproj">
+      <Project>{CB8A2426-C1B1-488E-9774-A684F75DB3E5}</Project>
+      <Name>OinkCoin</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31727.386
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OInkCoin.Android", "OInkCoin\OInkCoin.Android\OInkCoin.Android.csproj", "{F158D591-6094-4F12-BB1E-D4157BF71C7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OInkCoin", "OInkCoin\OInkCoin\OInkCoin.csproj", "{CB8A2426-C1B1-488E-9774-A684F75DB3E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OinkCoin", "OInkCoin\OInkCoin\OinkCoin.csproj", "{CB8A2426-C1B1-488E-9774-A684F75DB3E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
