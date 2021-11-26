@@ -10,8 +10,8 @@ namespace OInkCoin.Models
         //[PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public decimal Amount { get; set; }
-        public ICollection<TransactionType> Transactions { get; set; }
-        public ICollection<Category> Category { get; set; }
+        public TransactionType Type { get; set; }
+        public Category ChosenCategory { get; set; }
         public DateTime Date { get; set; }
         public string Notes { get; set; }
         public bool Recurring { get; set; }
@@ -29,8 +29,14 @@ namespace OInkCoin.Models
                 Debit
             }
         }
+        public enum TransactionType
+        {
+            Expense,
+            Transfer
+        }
 
-        
+
+
 
 
 

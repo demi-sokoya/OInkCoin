@@ -9,24 +9,30 @@
                 <StackLayout>
                     <StackLayout Orientation="Horizontal"
                                  HorizontalOptions="Center">
+
+                        <Label Text="Type: "/>
                         <Label Text="Expense" 
                                />
                         <Switch />
                         <Label Text="Transfer" 
                                />
                     </StackLayout>
-                    <Label Text="$0"
-                           FontSize="Header"
-                           HorizontalOptions="Center"/>
                     <StackLayout Orientation="Horizontal"
                                  HorizontalOptions="Center">
+                        <Label Text="Account: "/>
                         <Label Text="Credit" 
                                />
                         <Switch />
                         <Label Text="Debit" 
                                />
                     </StackLayout>
-                    <Grid>
+                    <Editor
+                        Text="$"
+                           Placeholder="0"
+                           FontSize="Header"
+                           HorizontalOptions="Center"/>
+                    
+                    <!--<Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                             
@@ -48,7 +54,7 @@
                              WidthRequest="10"
                              BackgroundColor="Transparent"
                                      Grid.Column="6"/>
-                    </Grid>
+                    </Grid>-->
                     <StackLayout Orientation="Horizontal" Spacing="20">
                         <Image Source="calendar.png"
                                HeightRequest="20"
@@ -66,7 +72,6 @@
                              BackgroundColor="Transparent"
                                      Grid.Column="6"/>
                     </StackLayout>
-
                 </StackLayout>
 
 
