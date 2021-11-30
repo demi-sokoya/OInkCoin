@@ -59,6 +59,9 @@ namespace OinkCoin.ViewModels
             IEnumerable<Transaction> transactions = await TransactionDataStore.GetTransactions();
             Transactions.AddRange(transactions);
 
+            IEnumerable<Category> categories = await CategoryDataStore.GetCategories();
+            Categories.AddRange(categories);
+
         }
     }
 }

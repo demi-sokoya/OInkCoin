@@ -2,7 +2,7 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:OinkCoin.Views"
-       Title="OInkCoin"
+       Title="OinkCoin"
        x:Class="OinkCoin.AppShell">
 
     <!--
@@ -48,6 +48,10 @@
 
     <TabBar>
         <ShellContent Route="OverviewPage" ContentTemplate="{DataTemplate local:OverviewPage}"/>
+    </TabBar>
+
+    <TabBar>
+        <ShellContent Route="AddNewTransactionPage" ContentTemplate="{DataTemplate local:AddNewTransactionPage}"/>
     </TabBar>
 
 </Shell>

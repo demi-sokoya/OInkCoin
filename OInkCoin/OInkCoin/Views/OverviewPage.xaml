@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="OinkCoin.Views.OverviewPage"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib">
+             xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:viewmodels="clr-namespace:OinkCoin.ViewModels" x:DataType="viewmodels:OinkViewModel">
     <ContentPage.Content>
         <AbsoluteLayout Padding="10">
             <StackLayout AbsoluteLayout.LayoutFlags="All"
@@ -12,16 +12,21 @@
                     <ImageButton Source="left.png" 
                              HeightRequest="20" 
                              WidthRequest="20"
-                             BackgroundColor="Transparent"/>
+                             BackgroundColor="Transparent"
+                                 Clicked="DecreaseMonth_OnClicked"/>
                     <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM yyyy}'}"
+                           x:Name="currentMonth"
                        FontSize="Medium"
                        TextColor="Black"
                        Padding="20,0,20,0"/>
                     <ImageButton Source="right.png" 
+                                 x:Name="IncreaseMonth"
                              HeightRequest="20" 
                              WidthRequest="20"
-                             BackgroundColor="Transparent"/>
+                             BackgroundColor="Transparent"
+                                 Clicked="IncreaseMonth_OnClicked"/>
                 </StackLayout>
+                <Picker ItemsSource="{Binding Categories}"/>
             </StackLayout>
             <ImageButton Source="add.png"
                          HorizontalOptions="End"
