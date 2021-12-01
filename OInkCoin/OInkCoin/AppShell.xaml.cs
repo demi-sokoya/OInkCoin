@@ -11,7 +11,12 @@ namespace OinkCoin
 
             Routing.RegisterRoute(nameof(OverviewPage), typeof(OverviewPage));
             Routing.RegisterRoute(nameof(AddNewTransactionPage), typeof(AddNewTransactionPage));
+            Routing.RegisterRoute(nameof(EditCategoriesPage), typeof(EditCategoriesPage));
         }
 
+        private async void OnMenuItemClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("//OverviewPage");
+        }
     }
 }
