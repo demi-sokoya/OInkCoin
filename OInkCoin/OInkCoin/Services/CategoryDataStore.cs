@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OinkCoin.Services
 {
-    class CategoryDataStore
+    class CategoryDataStore : ICategoryDataStore<Category>
     {
         public static string FilePath
         {
@@ -44,11 +44,8 @@ namespace OinkCoin.Services
         {
             var categories = new List<Category>()
             {
-                //new Category { Id = 1, Name = "Category A Local Json File", Description = "This is Category a." },
-                //new Category { Id = 2, Name = "Category B Local Json File", Description = "This is Category b." },
-                //new Category { Id = 3, Name = "Category C Local Json File", Description = "This is Category c." },
-                //new Category { Id = 4, Name = "Category D Local Json File", Description = "This is Category d." }
-
+                new Category() { CategoryId = 1, CategoryName = "Test Category 1", Color = "#FFFFFF" },
+                new Category() { CategoryId = 2, CategoryName = "Test Category 2", Color = "#FFFFFF" },
                 new Category { CategoryId = 1, CategoryName = "Food & Drinks", Color ="#FFE98A" }
             };
 

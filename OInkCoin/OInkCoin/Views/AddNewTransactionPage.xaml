@@ -7,10 +7,10 @@
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              >
 
-    <!--<ContentPage.BindingContext>
+    <ContentPage.BindingContext>
         <viewmodels:OinkViewModel/>
-    </ContentPage.BindingContext>-->
-    
+    </ContentPage.BindingContext>
+
     <ContentPage.Content>
         <AbsoluteLayout Padding="10">
             <StackLayout AbsoluteLayout.LayoutFlags="All"
@@ -81,9 +81,10 @@
                              BackgroundColor="Transparent"
                                      Grid.Column="6"/>
                     </StackLayout>
-                    <!--<Picker
-                        ItemsSource="{Binding Categories}"/>
-                    <Picker></Picker>-->
+                    <Picker
+                        ItemsSource="{Binding Categories}"
+                        ItemDisplayBinding="{Binding CategoryName}"
+                        />
                 </StackLayout>
 
 

@@ -1,5 +1,6 @@
 ﻿using Xamarin.Forms;
 using OinkCoin.Views;
+using OinkCoin.Services;
 
 namespace OinkCoin
 {
@@ -11,6 +12,8 @@ namespace OinkCoin
             InitializeComponent();
 
             MainPage = new NavigationPage(new OverviewPage());
+            DependencyService.Register<TransactionDataStore>();
+            DependencyService.Register<CategoryDataStore>();
         }
 
         protected override void OnStart()

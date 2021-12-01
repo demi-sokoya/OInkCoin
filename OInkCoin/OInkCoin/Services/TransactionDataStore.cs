@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OinkCoin.Services
 {
-    class TransactionDataStore
+    class TransactionDataStore : ITransactionDataStore<Transaction>
     {
         public static string FilePath
         {
