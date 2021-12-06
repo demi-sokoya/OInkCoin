@@ -31,14 +31,30 @@ namespace OinkCoin.Views
         private async void IncreaseMonth_OnClicked(object sender, EventArgs e)
         {
             
-            currentMonth.Text = current.AddMonths(1).ToString("MMMM yyyy");
+            //current = current.AddMonths(1);
+            //currentMonth.Text = current.ToString("MMMM yyyy");
+
             
+                current = current.AddMonths(1);
+                currentMonth.Text = current.ToString("MMMM yyyy");
+           
+
+
         }
 
         private async void DecreaseMonth_OnClicked(Object sender, EventArgs e)
         {
-            
-            currentMonth.Text = current.AddMonths(-1).ToString("MMMM yyyy");
+            //if (current >= DateTime.Now) { 
+            //    current = current.AddMonths(-1);
+            //    currentMonth.Text = current.ToString("MMMM yyyy");
+            //}
+
+            //if (current >= DateTime.Now)
+            //{
+                current = current.AddMonths(-1);
+                currentMonth.Text = current.ToString("MMMM yyyy");
+            //}
+
         }
     }
 }

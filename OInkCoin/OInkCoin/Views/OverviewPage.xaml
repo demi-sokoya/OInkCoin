@@ -2,7 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="OinkCoin.Views.OverviewPage"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:viewmodels="clr-namespace:OinkCoin.ViewModels" x:DataType="viewmodels:OinkViewModel" xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:viewmodels="clr-namespace:OinkCoin.ViewModels"
+             x:DataType="viewmodels:OinkViewModel"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:models="clr-namespace:OinkCoin.Models">
+    <ContentPage.BindingContext>
+        <viewmodels:OinkViewModel/>
+    </ContentPage.BindingContext>
+    
     <ContentPage.Content>
         <AbsoluteLayout Padding="10">
             <StackLayout AbsoluteLayout.LayoutFlags="All"
@@ -26,22 +34,38 @@
                              BackgroundColor="Transparent"
                                  Clicked="IncreaseMonth_OnClicked"/>
                 </StackLayout>
+                
                 <!--<Picker ItemsSource="{Binding Categories}"/>-->
                 <StackLayout Orientation="Horizontal"
                              BackgroundColor="LightGray">
-                    <Label Text="Toatal: "/>
+                    <Label Text="Total: "/>
                     <Label Text=""/>
                 </StackLayout>
-                <!--<ListView Background="Transparent"
+                <ListView Background="Transparent"
                           CachingStrategy="RecycleElement"
                           ItemsSource="{Binding Transactions}"
                           RowHeight="60">
-                    <ListView.Behaviors>
+                    <!--<ListView.Behaviors>
                         <xct:EventToCommandBehavior
                             EventName="TransactionSelected"/>
-                    </ListView.Behaviors>
+                    </ListView.Behaviors>-->
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Transaction">
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding ChosenCategory}" TextColor="Black"/>
+                                        <Label Text="{Binding Amount}"
+                                           HorizontalOptions="End"/>
+                                    </StackLayout>
+                                    <Label Text="{Binding Notes}"/>
+                                </StackLayout>
+                                
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
                     
-                </ListView>-->
+                </ListView>
             </StackLayout>
             <ImageButton Source="add.png"
                          HorizontalOptions="End"

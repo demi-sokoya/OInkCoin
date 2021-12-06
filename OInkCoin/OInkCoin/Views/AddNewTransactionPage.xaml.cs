@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using OinkCoin.ViewModels;
+using OinkCoin.Views;
+using OinkCoin.Services;
 
 namespace OinkCoin.Views
 {
@@ -20,6 +23,14 @@ namespace OinkCoin.Views
         private async void SaveTransaction_OnClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new OverviewPage());
+            
+
+            
+        }
+
+        private async void EditCategories_OnCLicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new EditCategoriesPage());
         }
     }
 }

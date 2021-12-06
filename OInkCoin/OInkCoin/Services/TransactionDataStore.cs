@@ -49,7 +49,7 @@ namespace OinkCoin.Services
                 //new Transaction { Id = 3, Name = "Transaction C Local Json File", Description = "This is Transaction c." },
                 //new Transaction { Id = 4, Name = "Transaction D Local Json File", Description = "This is Transaction d." }
 
-                new Transaction { Id = 1, Amount = 60, Date = DateTime.Now, Recurring = false, Notes = "Dummy entry", Type = Transaction.TransactionType.Expense}
+                new Transaction { Id = 1, Amount = 60, Date = DateTime.Now.Date, Recurring = false, Notes = "Dummy entry", Type = Transaction.TransactionType.Expense}
             };
 
             return Transactions;

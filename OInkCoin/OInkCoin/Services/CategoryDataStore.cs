@@ -44,9 +44,9 @@ namespace OinkCoin.Services
         {
             var categories = new List<Category>()
             {
-                new Category() { CategoryId = 1, CategoryName = "Test Category 1", Color = "#FFFFFF" },
-                new Category() { CategoryId = 2, CategoryName = "Test Category 2", Color = "#FFFFFF" },
-                new Category { CategoryId = 1, CategoryName = "Food & Drinks", Color ="#FFE98A" }
+                new Category() { CategoryId = 1, CategoryName = "Test Category 1", Color = "#FFFF00" },
+                new Category() { CategoryId = 2, CategoryName = "Test Category 2", Color = "#FF00FF" },
+                new Category() { CategoryId = 1, CategoryName = "Food & Drinks", Color ="#FFE98A" }
             };
 
             return categories;
