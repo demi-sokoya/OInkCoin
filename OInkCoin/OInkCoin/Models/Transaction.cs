@@ -15,8 +15,6 @@ namespace OinkCoin.Models
         public DateTime Date { get; set; }
         public string Notes { get; set; }
         public bool Recurring { get; set; }
-        public DateTime ReccuringStart { get; set; }
-        public DateTime RecuringEnd { get; set; }
         public int NumOfPayments { get; set; }
         public List<Accounts> Account { get; set; }
 

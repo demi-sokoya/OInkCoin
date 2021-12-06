@@ -49,7 +49,7 @@ namespace OinkCoin.Services
                 //new Transaction { Id = 3, Name = "Transaction C Local Json File", Description = "This is Transaction c." },
                 //new Transaction { Id = 4, Name = "Transaction D Local Json File", Description = "This is Transaction d." }
 
-                new Transaction { Id = 1, Amount = 60, Date = DateTime.Now.Date, Recurring = false, Notes = "Dummy entry", Type = Transaction.TransactionType.Expense}
+                new Transaction { Id = 1, Amount = 60, Date = DateTime.Now, Recurring = false, Notes = "Dummy entry", Type = Transaction.TransactionType.Expense}
             };
 
             return Transactions;
@@ -90,6 +90,15 @@ namespace OinkCoin.Services
         {
             var Transactions = ReadFile();
             Transactions.Add(Transaction);
+
+            WriteFile(Transactions);
+        }
+
+        public async Task RemoveSelectedTransaction(Transaction Transaction)
+        {
+            var Transactions = ReadFile();
+            Transactions[Transactions.FindIndex(p => p.Id == Transaction.Id)] = Transaction;
+            Transactions.Remove(Transaction);
 
             WriteFile(Transactions);
         }

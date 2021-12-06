@@ -13,16 +13,29 @@ namespace OinkCoin.ViewModels
         public ObservableRangeCollection<Transaction> Transactions { get; set; }
         public ObservableRangeCollection<Category> Categories { get; set; }
 
+        public decimal Amount { get; set; }
+        public Transaction.TransactionType Type { get; set; }
+        public Category Category { get; set; }
+        public string Notes { get; set; }
+        public DateTime Date { get; set; }
+        public bool Recurring { get; set; }
+        public int NumOfPayments { get; set; }
+        public Transaction.Accounts Account { get; set; }
+
         public AsyncCommand RefreshCommand { get; }
-        //public AsyncCommand<Transaction> SelectedCommand { get; }
+        public AsyncCommand<Transaction> SelectedCommand { get; }
 
-        //Transaction selectedTransaction;
+        public AsyncCommand<Transaction> AddCommand { get; }
 
-        //public Transaction SelectedTransaction
-        //{
-        //    get => selectedTransaction;
-        //    set => SetProperty(ref selectedTransaction, value);
-        //}
+        public AsyncCommand<Transaction> RemoveCommand { get; }
+
+        Transaction selectedTransaction;
+
+        public Transaction SelectedTransaction
+        {
+            get => selectedTransaction;
+            set => SetProperty(ref selectedTransaction, value);
+        }
 
         public OinkViewModel()
         {
@@ -35,7 +48,12 @@ namespace OinkCoin.ViewModels
             Load();
 
             RefreshCommand = new AsyncCommand(Refresh);
+
             //SelectedCommand = new AsyncCommand<Transaction>(Selected);
+
+            AddCommand = new AsyncCommand<Transaction>(Add);
+
+            //RemoveCommand = new AsyncCommand<Transaction>(Remove);
         }
 
         //async Task Selected(Transaction Transaction)
@@ -43,6 +61,12 @@ namespace OinkCoin.ViewModels
         //    string route = $"{nameof(Views.TransactionDetailPage)}?TransactionId={Transaction.Id}";
         //    await Shell.Current.GoToAsync(route);
         //}
+
+        async Task Add(Transaction transaction)
+        {
+            await TransactionDataStore.AddTransaction(transaction);
+            //new Transaction { Account = Account, Amount = Amount, ChosenCategory = Category, Date = Date, Notes = Notes, Recurring = Recurring, NumOfPayments = NumOfPayments };
+        }
 
         private async Task Refresh()
         {
@@ -62,6 +86,11 @@ namespace OinkCoin.ViewModels
             IEnumerable<Category> categories = await CategoryDataStore.GetCategories();
             Categories.AddRange(categories);
 
+        }
+
+        async Task Remove()
+        {
+            //await TransactionDataStore.RemoveSelectedTransaction;
         }
     }
 }

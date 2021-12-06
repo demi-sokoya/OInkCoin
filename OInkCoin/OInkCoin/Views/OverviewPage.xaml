@@ -7,9 +7,9 @@
              x:DataType="viewmodels:OinkViewModel"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:models="clr-namespace:OinkCoin.Models">
-    <ContentPage.BindingContext>
+    <!--<ContentPage.BindingContext>
         <viewmodels:OinkViewModel/>
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext>-->
     
     <ContentPage.Content>
         <AbsoluteLayout Padding="10">
@@ -40,11 +40,24 @@
                              BackgroundColor="LightGray">
                     <Label Text="Total: "/>
                     <Label Text=""/>
+                    <ImageButton Source="edit.png"
+                                 HeightRequest="20" 
+                                 WidthRequest="20"
+                                 BackgroundColor="Transparent"
+                                 HorizontalOptions="End"/>
+                    <ImageButton Source="trash.png"
+                                 HeightRequest="20" 
+                                 WidthRequest="20"
+                                 BackgroundColor="Transparent"
+                                 HorizontalOptions="Center"/>
+                    
                 </StackLayout>
                 <ListView Background="Transparent"
                           CachingStrategy="RecycleElement"
                           ItemsSource="{Binding Transactions}"
-                          RowHeight="60">
+                          RowHeight="60"
+                          x:Name="lvTransactions"
+                          SelectedItem="{Binding SelectedTransaction}">
                     <!--<ListView.Behaviors>
                         <xct:EventToCommandBehavior
                             EventName="TransactionSelected"/>
@@ -54,7 +67,7 @@
                             <ViewCell>
                                 <StackLayout Orientation="Vertical">
                                     <StackLayout Orientation="Horizontal">
-                                        <Label Text="{Binding ChosenCategory}" TextColor="Black"/>
+                                        <!--<Label Text="{Binding ChosenCategory}" TextColor="Black"/>-->
                                         <Label Text="{Binding Amount}"
                                            HorizontalOptions="End"/>
                                     </StackLayout>
