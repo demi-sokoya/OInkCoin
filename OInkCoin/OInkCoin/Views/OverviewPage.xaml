@@ -23,7 +23,7 @@
                              WidthRequest="20"
                              BackgroundColor="Transparent"
                                  Clicked="DecreaseMonth_OnClicked"/>
-                    <Label Text=""
+                    <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM yyyy}'}"
                            x:Name="currentMonth"
                        FontSize="Medium"
                        TextColor="Black"

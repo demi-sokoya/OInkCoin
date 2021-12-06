@@ -17,7 +17,7 @@ namespace OinkCoin.ViewModels
 
         public decimal Amount { get; set; }
         public Transaction.TransactionType Type { get; set; }
-        public Category Category { get; set; }
+        public Category PickedCategory { get; set; }
         public string Notes { get; set; }
         public DateTime Date { get; set; }
         public bool Recurring { get; set; }
@@ -67,7 +67,7 @@ namespace OinkCoin.ViewModels
         async Task Add(Transaction transaction)
         {
             await TransactionDataStore.AddTransaction(transaction);
-            new Transaction { Account = Account, Amount = Amount, ChosenCategory = Category, Date = Date, Notes = Notes, Recurring = Recurring, NumOfPayments = NumOfPayments };
+            new Transaction { Account = Account, Amount = Amount, ChosenCategory = PickedCategory, Date = Date, Notes = Notes, Recurring = Recurring, NumOfPayments = NumOfPayments };
         }
 
         private async Task Refresh()

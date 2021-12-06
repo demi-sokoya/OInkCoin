@@ -94,7 +94,7 @@
                         <Picker HorizontalOptions="FillAndExpand"
                         ItemsSource="{Binding Categories}"
                         ItemDisplayBinding="{Binding CategoryName}"
-                        BindingContext="{Binding Category}"/>
+                        SelectedIndex="{Binding PickedCategory}"/>
                         <ImageButton Source="edit.png"
                                      Clicked="EditCategories_OnCLicked"
                                      HeightRequest="20"/>
