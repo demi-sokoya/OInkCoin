@@ -10,7 +10,8 @@ namespace OinkCoin.Models
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
         public string Color { get; set; }
+        public Xamarin.Forms.Brush BrushColor { get; set; }
 
-       
+
     }
 }

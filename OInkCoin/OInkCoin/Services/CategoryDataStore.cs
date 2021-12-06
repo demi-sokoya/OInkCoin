@@ -63,9 +63,9 @@ namespace OinkCoin.Services
         {
             var categories = ReadFile();
 
-            var Category = categories.Find(p => p.CategoryId == categoryId);
-
-            return Category;
+            var category = categories.Find(p => p.CategoryId == categoryId);
+            //category.BrushColor
+            return category;
         }
 
         public async Task<IEnumerable<Category>> GetCategories()

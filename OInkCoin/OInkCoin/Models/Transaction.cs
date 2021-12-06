@@ -16,21 +16,17 @@ namespace OinkCoin.Models
         public string Notes { get; set; }
         public bool Recurring { get; set; }
         public int NumOfPayments { get; set; }
-        public List<Accounts> Account { get; set; }
+        public AccountType Account { get; set; }
 
-        public class Accounts
+        public enum AccountType
         {
-            public int Id { get; set; }
-            public enum Types
-            {
-                Credit,
-                Debit
-            }
+            Credit = 0,
+            Debit = 1
         }
         public enum TransactionType
         {
-            Expense,
-            Transfer
+            Expense = 0,
+            Transfer = 1
         }
 
 

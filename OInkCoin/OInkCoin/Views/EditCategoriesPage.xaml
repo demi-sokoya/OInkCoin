@@ -21,7 +21,7 @@
                         <ViewCell>
                             <StackLayout Orientation="Horizontal">
                                 <Label Text="{Binding CategoryName}" TextColor="Black"/>
-                                <Ellipse Fill="{Binding Color}"
+                                <Ellipse Background="{Binding Color}"
                                          WidthRequest="45"
                                          HeightRequest="45"
                                          HorizontalOptions="End"/>

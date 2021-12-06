@@ -10,7 +10,9 @@ namespace OinkCoin.ViewModels
 {
     class OinkViewModel: ViewModelBase
     {
+        
         public ObservableRangeCollection<Transaction> Transactions { get; set; }
+       
         public ObservableRangeCollection<Category> Categories { get; set; }
 
         public decimal Amount { get; set; }
@@ -20,7 +22,7 @@ namespace OinkCoin.ViewModels
         public DateTime Date { get; set; }
         public bool Recurring { get; set; }
         public int NumOfPayments { get; set; }
-        public Transaction.Accounts Account { get; set; }
+        public Transaction.AccountType Account { get; set; }
 
         public AsyncCommand RefreshCommand { get; }
         public AsyncCommand<Transaction> SelectedCommand { get; }
@@ -65,7 +67,7 @@ namespace OinkCoin.ViewModels
         async Task Add(Transaction transaction)
         {
             await TransactionDataStore.AddTransaction(transaction);
-            //new Transaction { Account = Account, Amount = Amount, ChosenCategory = Category, Date = Date, Notes = Notes, Recurring = Recurring, NumOfPayments = NumOfPayments };
+            new Transaction { Account = Account, Amount = Amount, ChosenCategory = Category, Date = Date, Notes = Notes, Recurring = Recurring, NumOfPayments = NumOfPayments };
         }
 
         private async Task Refresh()
