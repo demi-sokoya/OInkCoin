@@ -15,19 +15,9 @@ namespace OinkCoin.ViewModels
        
         public ObservableRangeCollection<Category> Categories { get; set; }
 
-        public decimal Amount { get; set; }
-        public Transaction.TransactionType Type { get; set; }
-        public Category PickedCategory { get; set; }
-        public string Notes { get; set; }
-        public DateTime Date { get; set; }
-        public bool Recurring { get; set; }
-        public int NumOfPayments { get; set; }
-        public Transaction.AccountType Account { get; set; }
 
         public AsyncCommand RefreshCommand { get; }
         public AsyncCommand<Transaction> SelectedCommand { get; }
-
-        public AsyncCommand<Transaction> AddCommand { get; }
 
         public AsyncCommand<Transaction> RemoveCommand { get; }
 
@@ -53,8 +43,6 @@ namespace OinkCoin.ViewModels
 
             //SelectedCommand = new AsyncCommand<Transaction>(Selected);
 
-            AddCommand = new AsyncCommand<Transaction>(Add);
-
             //RemoveCommand = new AsyncCommand<Transaction>(Remove);
         }
 
@@ -64,14 +52,6 @@ namespace OinkCoin.ViewModels
         //    await Shell.Current.GoToAsync(route);
         //}
 
-        async Task Add(Transaction transaction)
-        {
-            await TransactionDataStore.AddTransaction(transaction);
-            new Transaction { Account = Account, Amount = Amount, ChosenCategory = PickedCategory, Date = Date, Notes = Notes, Recurring = Recurring, NumOfPayments = NumOfPayments };
-
-            IEnumerable<Transaction> transactions = await TransactionDataStore.GetTransactions();
-            Transactions.AddRange(transactions);
-        }
 
         private async Task Refresh()
         {

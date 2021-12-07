@@ -8,7 +8,7 @@
              >
 
     <ContentPage.BindingContext>
-        <viewmodels:OinkViewModel/>
+        <viewmodels:TransactionViewModel/>
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
@@ -16,13 +16,14 @@
             <StackLayout AbsoluteLayout.LayoutFlags="All"
                          AbsoluteLayout.LayoutBounds="0,0,1,1">
                 <StackLayout>
+                    <Label Text="{Binding Test}"/>
                     <StackLayout Orientation="Horizontal"
                                  HorizontalOptions="Center">
 
                         <Label Text="Type: "/>
                         <Label Text="Expense" 
                                />
-                        <Switch BindingContext="{Binding Type}"/>
+                        <Switch IsToggled="{Binding Type}"/>
                         <Label Text="Transfer" 
                                />
                     </StackLayout>
@@ -31,7 +32,7 @@
                         <Label Text="Account: "/>
                         <Label Text="Credit" 
                                />
-                        <Switch BindingContext="{Binding Account}"/>
+                        <Switch IsToggled="{Binding Account}"/>
                         <Label Text="Debit" 
                                />
                     </StackLayout>
@@ -45,47 +46,20 @@
                            WidthRequest="200"
                            Text="{Binding Amount}"/>
                     </StackLayout>
-                        
-                    
-                    <!--<Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            
-                        </Grid.RowDefinitions>
-                        <BoxView></BoxView>
-                        <Image Source="calendar.png"
-                               HeightRequest="20"
-                               Grid.Column="0"/>
-                        <DatePicker Grid.Column="1"
-                                    Grid.ColumnSpan="3"/>
-                        <ImageButton Source="left.png" 
-                             HeightRequest="10" 
-                             WidthRequest="10"
-                             BackgroundColor="Transparent"
-                                     Grid.Column="5"/>
-                        
-                        <ImageButton Source="right.png" 
-                             HeightRequest="10" 
-                             WidthRequest="10"
-                             BackgroundColor="Transparent"
-                                     Grid.Column="6"/>
-                    </Grid>-->
                     <StackLayout Orientation="Horizontal" Spacing="20">
                         <Image Source="calendar.png"
                                HeightRequest="20"
                                />
-                        <DatePicker BindingContext="{Binding Date}"/>
-                        <ImageButton Source="left.png" 
+                        <DatePicker Date="{Binding Date}" WidthRequest="120"/>
+                        <!--<ImageButton Source="left.png" 
                              HeightRequest="12" 
                              WidthRequest="12"
-                             BackgroundColor="Transparent"
-                                     Grid.Column="5"/>
+                             BackgroundColor="Transparent"/>
 
                         <ImageButton Source="right.png" 
                              HeightRequest="12" 
                              WidthRequest="12"
-                             BackgroundColor="Transparent"
-                                     Grid.Column="6"/>
+                             BackgroundColor="Transparent" />-->
                     </StackLayout>
                     <StackLayout Orientation="Horizontal"
                                  Spacing="20">
@@ -98,17 +72,17 @@
                         <ImageButton Source="edit.png"
                                      Clicked="EditCategories_OnCLicked"
                                      HeightRequest="20"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal"
+                </StackLayout>
+                <StackLayout Orientation="Horizontal"
                                  Spacing="20">
                         <Image Source="repeat.png"
                                HeightRequest="20"/>
                         <Label Text="Recurring"
                                VerticalOptions="Center"
                                />
-                        <Switch BindingContext="{Binding Recurring}"/>
+                        <Switch IsToggled="{Binding Recurring}"/>
                         <Entry Placeholder="Number of Payments"
-                               BindingContext="{Binding NumOfPayments}"/>
+                               Text="{Binding NumOfPayments}" WidthRequest="50"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal"
                                  Spacing="20">
