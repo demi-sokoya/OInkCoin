@@ -21,7 +21,8 @@ namespace OinkCoin.Services
 
         private List<Transaction> ReadFile()
         {
-            File.Delete(FilePath);
+            //This line is from my example and is only needed if you want the defaults every time.
+            //File.Delete(FilePath);
             try
             {
                 var jsonString = File.ReadAllText(FilePath);
