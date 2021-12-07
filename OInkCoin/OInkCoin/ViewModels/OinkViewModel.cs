@@ -68,6 +68,9 @@ namespace OinkCoin.ViewModels
         {
             await TransactionDataStore.AddTransaction(transaction);
             new Transaction { Account = Account, Amount = Amount, ChosenCategory = PickedCategory, Date = Date, Notes = Notes, Recurring = Recurring, NumOfPayments = NumOfPayments };
+
+            IEnumerable<Transaction> transactions = await TransactionDataStore.GetTransactions();
+            Transactions.AddRange(transactions);
         }
 
         private async Task Refresh()

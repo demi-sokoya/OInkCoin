@@ -23,7 +23,9 @@ namespace OinkCoin.Views
 
         private async void AddTransaction_OnClicked(object sender, EventArgs e)
         {
+            await DisplayAlert("Alert", "You have been alerted", "OK");
             await Navigation.PushAsync(new AddNewTransactionPage());
+
         }
 
 
@@ -37,6 +39,7 @@ namespace OinkCoin.Views
             
                 current = current.AddMonths(1);
                 currentMonth.Text = current.ToString("MMMM yyyy");
+                
            
 
 

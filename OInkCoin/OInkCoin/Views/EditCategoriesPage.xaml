@@ -11,7 +11,7 @@
     </ContentPage.BindingContext>
     
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Padding="20">
             <ListView Background="Transparent"
                       CachingStrategy="RecycleElement"
                       ItemsSource="{Binding Categories}"
@@ -20,17 +20,29 @@
                     <DataTemplate x:DataType="models:Category">
                         <ViewCell>
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding CategoryName}" TextColor="Black"/>
-                                <Ellipse Background="{Binding Color}"
-                                         WidthRequest="45"
+                                <Ellipse BackgroundColor="{Binding Color}"
+                                         WidthRequest="5"
                                          HeightRequest="45"
-                                         HorizontalOptions="End"/>
+                                         HorizontalOptions="Center"
+                                         x:Name="CategoryColor"
+                                         />
+                                <Label Text="{Binding CategoryName}" TextColor="Black"/>
+                                
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
                 
             </ListView>
+            <ImageButton Source="plus.png"
+                         HeightRequest="20"
+                         WidthRequest="20"
+                         xct:IconTintColorEffect.TintColor="Red"
+                         BackgroundColor="Transparent"
+                         VerticalOptions="Start"
+                         HorizontalOptions="End"
+                         Clicked="AddCategories_OnCLicked"/> 
+            
 
         </StackLayout>
     </ContentPage.Content>
