@@ -95,7 +95,7 @@
                                 <Editor Placeholder="Notes"
                                        WidthRequest="250"
                                        HeightRequest="200"
-                                       BindingContext="{Binding Notes}"/>
+                                       Text="{Binding Notes}"/>
                             </Frame>
                              
                         </Grid>

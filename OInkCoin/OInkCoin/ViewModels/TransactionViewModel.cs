@@ -30,7 +30,7 @@ namespace OinkCoin.ViewModels
 
             //Set the defaults for new transactions.
             Amount = 50;
-            Type = TransactionType.Transfer;
+            Type = TransactionType.Expense;
             Date = DateTime.Now;
             Notes = "";
             Recurring = false;
