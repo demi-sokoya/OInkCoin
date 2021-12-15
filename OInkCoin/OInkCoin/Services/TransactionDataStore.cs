@@ -45,11 +45,6 @@ namespace OinkCoin.Services
         {
             var Transactions = new List<Transaction>()
             {
-                //new Transaction { Id = 1, Name = "Transaction A Local Json File", Description = "This is Transaction a." },
-                //new Transaction { Id = 2, Name = "Transaction B Local Json File", Description = "This is Transaction b." },
-                //new Transaction { Id = 3, Name = "Transaction C Local Json File", Description = "This is Transaction c." },
-                //new Transaction { Id = 4, Name = "Transaction D Local Json File", Description = "This is Transaction d." }
-
                 new Transaction { Id = 1, Amount = 60, Date = DateTime.Now, Recurring = false, Notes = "Dummy entry", Type = Transaction.TransactionType.Expense}
             };
 

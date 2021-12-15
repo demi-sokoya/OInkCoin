@@ -17,47 +17,23 @@ namespace OinkCoin.Views
         public OverviewPage()
         {
             InitializeComponent();
-            
-
         }
 
         private async void AddTransaction_OnClicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Alert", "You have been alerted", "OK");
             await Navigation.PushAsync(new AddNewTransactionPage());
-
         }
-
-
 
         private async void IncreaseMonth_OnClicked(object sender, EventArgs e)
         {
-            
-            //current = current.AddMonths(1);
-            //currentMonth.Text = current.ToString("MMMM yyyy");
-
-            
                 current = current.AddMonths(1);
                 currentMonth.Text = current.ToString("MMMM yyyy");
-                
-           
-
-
         }
 
         private async void DecreaseMonth_OnClicked(Object sender, EventArgs e)
         {
-            //if (current >= DateTime.Now) { 
-            //    current = current.AddMonths(-1);
-            //    currentMonth.Text = current.ToString("MMMM yyyy");
-            //}
-
-            //if (current >= DateTime.Now)
-            //{
                 current = current.AddMonths(-1);
                 currentMonth.Text = current.ToString("MMMM yyyy");
-            //}
-
         }
     }
 }

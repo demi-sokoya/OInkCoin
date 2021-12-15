@@ -5,7 +5,7 @@
              xmlns:viewmodels="clr-namespace:OinkCoin.ViewModels"
              xmlns:models="clr-namespace:OinkCoin.Models"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-             >
+             Title="Add New Transaction">
 
     <ContentPage.BindingContext>
         <viewmodels:TransactionViewModel/>
@@ -38,7 +38,8 @@
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="$"
-                               TextColor="LightGray"/>
+                               TextColor="LightGray"
+                               FontSize="Header"/>
                         <Editor
                            Placeholder="0"
                            FontSize="Header"

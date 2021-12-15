@@ -21,7 +21,7 @@ namespace OinkCoin.Services
 
         private List<Category> ReadFile()
         {
-            File.Delete(FilePath);
+            //File.Delete(FilePath);
             try
             {
                 var jsonString = File.ReadAllText(FilePath);
@@ -89,6 +89,15 @@ namespace OinkCoin.Services
             categories.Add(category);
 
             WriteFile(categories);
+        }
+
+        public async Task RemoveCategory(Category Category)
+        {
+            var Categories = ReadFile();
+            Categories[Categories.FindIndex(p => p.CategoryId == Category.CategoryId)] = Category;
+            Categories.Remove(Category);
+
+            WriteFile(Categories);
         }
     }
 }

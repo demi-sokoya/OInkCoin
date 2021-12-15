@@ -6,11 +6,14 @@
              xmlns:viewmodels="clr-namespace:OinkCoin.ViewModels"
              x:DataType="viewmodels:OinkViewModel"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-             xmlns:models="clr-namespace:OinkCoin.Models">
+             xmlns:models="clr-namespace:OinkCoin.Models"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="x"
+             Title="OverviewPage">
     
-    <ContentPage.BindingContext>
+    <!--<ContentPage.BindingContext>
         <viewmodels:OverviewViewModel/>
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext>-->
     
     <ContentPage.Content>
         <AbsoluteLayout Padding="10">

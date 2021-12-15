@@ -7,15 +7,33 @@
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              Title="Edit Categories">
     <ContentPage.BindingContext>
-        <viewmodels:OinkViewModel/>
+        <viewmodels:CategoryViewModel/>
     </ContentPage.BindingContext>
     
     <ContentPage.Content>
         <StackLayout Padding="20">
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="CenterAndExpand">
+                <Entry Placeholder="Category Name"
+                       Text="{Binding CategoryName}"/>
+                <Entry Placeholder="Category Color"
+                       Text="{Binding CategoryColor}"/>
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center">
+                <Button Text="Add"
+                        Command="{Binding AddCommand}"/>
+                <Button Text="Delete"
+                        Command="{Binding RemoveCommand}"/>
+            </StackLayout>
+            
+            
             <ListView Background="Transparent"
                       CachingStrategy="RecycleElement"
                       ItemsSource="{Binding Categories}"
-                      RowHeight="60">
+                      RowHeight="60"
+                      SelectedItem="{Binding SelectedCategory}">
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="models:Category">
                         <ViewCell>
@@ -34,14 +52,14 @@
                 </ListView.ItemTemplate>
                 
             </ListView>
-            <ImageButton Source="plus.png"
+            <!--<ImageButton Source="plus.png"
                          HeightRequest="20"
                          WidthRequest="20"
                          xct:IconTintColorEffect.TintColor="Red"
                          BackgroundColor="Transparent"
                          VerticalOptions="Start"
                          HorizontalOptions="End"
-                         Clicked="AddCategories_OnCLicked"/> 
+                         Clicked="AddCategories_OnCLicked"/>--> 
             
 
         </StackLayout>

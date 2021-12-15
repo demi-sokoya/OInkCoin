@@ -6,12 +6,24 @@ using Xamarin.Forms;
 using Xamarin.CommunityToolkit.ObjectModel;
 using OinkCoin.Models;
 using static OinkCoin.Models.Transaction;
+using OinkCoin.Views;
 
 namespace OinkCoin.ViewModels
 {
     class TransactionViewModel : ViewModelBase
-    {
-        public ObservableRangeCollection<Category> Categories { get; set; }
+    { 
+        
+
+        private ObservableRangeCollection<Category> _Categories;
+        public ObservableRangeCollection<Category> Categories
+        {
+            get { return _Categories; }
+            set { _Categories = value; 
+                    OnPropertyChanged();}
+        }
+           
+       
+
 
         public decimal Amount { get; set; }
         public TransactionType Type { get; set; }
@@ -23,7 +35,13 @@ namespace OinkCoin.ViewModels
         public AccountType Account { get; set; }
         public Category PickedCategory { get; set; }
 
+        
+
+        //public string CategoryName { get; set; }
+        //public string CategoryColor { get; set; }
+
         public AsyncCommand AddCommand { get; }
+        //public AsyncCommand AddCategoryCommand { get; }
         public TransactionViewModel()
         {
             Categories = new ObservableRangeCollection<Category>();
@@ -38,6 +56,7 @@ namespace OinkCoin.ViewModels
             Account = AccountType.Debit;
             PickedCategory = null;
             AddCommand = new AsyncCommand(Add);
+            //AddCategoryCommand = new AsyncCommand(AddCategory);
             Load();
         }
 
@@ -54,6 +73,15 @@ namespace OinkCoin.ViewModels
             
             //Break just below this line to see a list of all transactions.
             IEnumerable<Transaction> transactions = await TransactionDataStore.GetTransactions();
+
+           
         }
+        //async Task AddCategory()
+        //{
+        //    var newCategory = new Category { CategoryName = CategoryName, Color = CategoryColor };
+        //    await CategoryDataStore.AddCategory(newCategory);
+
+        //    IEnumerable<Category> categories = await CategoryDataStore.GetCategories();
+        //}
     }
 }

@@ -14,6 +14,9 @@ namespace OinkCoin.Services
             Task<Category> GetCategory(int categoryId);
             Task AddCategory(Category category);
             Task UpdateCategory(Category category);
+            Task RemoveCategory(Category category);
+
+
         }
     }
 
