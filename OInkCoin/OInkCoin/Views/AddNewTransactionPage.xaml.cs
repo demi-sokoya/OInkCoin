@@ -20,6 +20,12 @@ namespace OinkCoin.Views
             InitializeComponent();
         }
 
+        protected override bool OnBackButtonPressed()
+        {
+            // Do your magic here
+            return true;
+        }
+
         private async void SaveTransaction_OnClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new OverviewPage());

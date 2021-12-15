@@ -11,16 +11,7 @@ namespace OinkCoin.ViewModels
 {
     class CategoryViewModel: ViewModelBase
     {
-        private ObservableRangeCollection<Category> _Categories;
-        public ObservableRangeCollection<Category> Categories
-        {
-            get { return _Categories; }
-            set
-            {
-                _Categories = value;
-                OnPropertyChanged();
-            }
-        }
+        
 
         public Category SelectedCategory { get; set; }
 
@@ -36,7 +27,7 @@ namespace OinkCoin.ViewModels
 
         public CategoryViewModel()
         {
-            Categories = new ObservableRangeCollection<Category>();
+            Categories = new MvvmHelpers.ObservableRangeCollection<Category>();
             AddCommand = new AsyncCommand(Add);
             Load();
             RefreshCommand = new AsyncCommand(Refresh);

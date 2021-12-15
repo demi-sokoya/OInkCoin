@@ -67,7 +67,7 @@
                         <Image Source="list.png"
                                HeightRequest="20"/>
                         <Picker HorizontalOptions="FillAndExpand"
-                        ItemsSource="{Binding Categories}"
+                        ItemsSource="{Binding Categories, Mode=TwoWay}"
                         ItemDisplayBinding="{Binding CategoryName}"
                         SelectedIndex="{Binding PickedCategory}"/>
                         <ImageButton Source="edit.png"

@@ -12,18 +12,6 @@ namespace OinkCoin.ViewModels
 {
     class TransactionViewModel : ViewModelBase
     { 
-        
-
-        private ObservableRangeCollection<Category> _Categories;
-        public ObservableRangeCollection<Category> Categories
-        {
-            get { return _Categories; }
-            set { _Categories = value; 
-                    OnPropertyChanged();}
-        }
-           
-       
-
 
         public decimal Amount { get; set; }
         public TransactionType Type { get; set; }
@@ -42,9 +30,12 @@ namespace OinkCoin.ViewModels
 
         public AsyncCommand AddCommand { get; }
         //public AsyncCommand AddCategoryCommand { get; }
+
+        
+
         public TransactionViewModel()
         {
-            Categories = new ObservableRangeCollection<Category>();
+            Categories = new MvvmHelpers.ObservableRangeCollection<Category>();
 
             //Set the defaults for new transactions.
             Amount = 50;

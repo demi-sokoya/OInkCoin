@@ -11,5 +11,16 @@ namespace OinkCoin.ViewModels
 
         public ICategoryDataStore<Category> CategoryDataStore => DependencyService.Get<ICategoryDataStore<Category>>();
 
+        private ObservableRangeCollection<Category> _Categories;
+        public ObservableRangeCollection<Category> Categories
+        {
+            get { return _Categories; }
+            set
+            {
+                _Categories = value;
+                OnPropertyChanged();
+            }
+        }
+
     }
 }
